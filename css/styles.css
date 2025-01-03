@@ -1,0 +1,795 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color:#fc5d66;
+    --secondary-color:#ffc05a;
+    --light-color:#f9fafb;
+    --dark-color:#272d35;
+}
+html,
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+img {
+    max-width: 100%;
+}
+.container{
+    padding-bottom: 20px;
+    text-align: center;
+   
+}
+
+
+/* -----Typography------ */
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 600;
+  }
+h1{
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+p{
+    font-size: 15px;
+  }
+
+
+/* -----Navbar------ */
+.navbar{
+    background: #D9ECEC;
+    color: #0b0c0d;
+    position: fixed;
+    padding: 0 20px;
+    border-bottom: 2.5px solid #ccc;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    transition: background-color 0.3s ease-in-out;
+    
+}
+.navbar-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar img{
+    max-width: 100px;
+    /* padding-top: 10px; */
+}
+.navbar .mm-list{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 20px;
+    font-weight: 600;
+}
+.navbar a{
+    color: #0e0f0f;
+}
+.navbar a:hover{
+    color: coral;
+    border-bottom: 2px solid coral;
+}
+.navbar i{
+    font-size: 20px;
+}
+/*Mobile menu*/
+.mobile-menu{
+    display: none;
+}
+.navbar .mobile-menu-toggle{
+    color: #0b0c0d;
+    cursor: pointer;
+}
+.navbar .mobile-mm-items{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /* background: rgba(0, 0, 0, 0.8); */
+    background: #f4f4f4;
+    opacity: 0.95;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+.navbar .mobile-mm-items.active{
+    transform: translateX(0);
+}
+.navbar .mobile-mm-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+/* -----Home------ */
+
+.home{
+    padding-top: 100px;
+}
+.home h1{
+    color: #f2f2f2;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: spectrul;
+    }
+
+.home p, h3{
+    color: #f4f4f4;
+}
+.home p{
+    padding-bottom: 20px;
+}
+
+.home .content{
+    padding: 140px 0;
+    background: url(/images/banner-bg.jpg) no-repeat top center;
+    background-size: cover;
+    /* position: relative; */
+}
+section .section-btn{
+    background-color: coral;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    transform: translateY(0);
+    transition: transform 1s ease-in-out;
+}
+section .section-btn:hover{
+    transform:translateY(-10px);
+    background: rgb(10, 1, 46);
+}
+
+/* -----Cook Delicious------ */
+
+.cook-delicious h3{
+    color: #fff;
+  line-height:-10px;
+}
+.cook-delicious h5{
+    margin-bottom: 20px;
+}
+.cook-delicious .cook-delicious-bunch{
+    padding: 0 30px ;
+}
+.cook-delicious .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+   
+}
+.cook-delicious .first-img{
+    overflow: hidden;
+}
+.cook-delicious .cook-content{
+    max-width: 100%;
+    background: rgb(255, 169, 135);
+    box-sizing: border-box;
+    box-shadow: 0  4px 8px rgba(0, 0, 0, 0.2), ;
+    border-radius: 2px;
+    text-align: center;
+    padding: 80px 50px;
+    position: absolute;
+}
+.cook-delicious .second-img{
+    overflow: hidden;
+}
+.cook-delicious .section-btn{
+    
+    background-color: rgb(18, 131, 18);
+  
+}
+/* -----Service------ */
+#servives .service-bunch h3{
+    color: #000;
+    font-size: 20px;
+
+}
+#services .service-items{
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    padding: 0 50px;
+    
+}
+
+#services .service-bunch img{
+    border:  10px solid #dadada;
+    border-radius: 50%;
+    max-width: 200px;
+    height: 200px;
+}
+
+/* -----Booking------ */
+#booking h2{
+    color: #fff;
+}
+#booking .booking-bunch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(/images/book-bg.jpg) no-repeat top center;
+    background-size: cover;
+    overflow: hidden; 
+    text-align: center;
+    height: 500px;
+}
+#booking img{
+    width: 450px;
+}
+#booking .content{
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#booking .section-btn{
+    padding: 12px 50px;
+    background: #000;
+    box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+      0 1px 1px rgba(128, 128, 128, 0.155),
+      0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+      0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+      0 12px 12px rgba(128, 128, 128, 0.35);
+   
+    
+}
+#booking .section-btn:hover{
+    background: linear-gradient(blue,rgb(87, 71, 228));
+      transform: translateX(-100%);
+      transition: 0.3s;
+}
+
+/* -----featured food------ */
+#blog .container{
+    margin-bottom: 30px;
+}
+
+#blog .blog-bunch{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+#blog .blog-content{
+    /* box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white; */
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    margin-bottom: 30px;
+}
+#blog .blog-grid{
+    display: grid;
+    justify-content:center;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    padding:30px 20px;
+    border: 1px solid #ddd;
+}
+#blog .blog-item{
+    /* background-color:yellowgreen; */
+    padding: 10px 20px;
+}
+#blog .blog-image{
+
+    position: relative;
+}
+
+#blog img{
+    width: 450px;
+    height: 300px; 
+}
+#blog h2{
+    font-size: 25px;
+}
+#blog p{
+    color: #747474;
+}
+#blog .blog-date{
+    padding: 5px 12px;
+    background: rgb(255, 21, 21);
+    width: 100px;
+    align-self: start;
+    position: absolute;
+}
+#blog .content{
+
+}
+#blog .section-btn{
+    padding: 13px 50px;
+    border-radius: 15px;
+    background: transparent;
+    border: 1.5px solid coral;
+    color: coral;
+    font-weight: 500;
+    font-size: 20px;
+ 
+}
+
+/* -----footer------ */
+
+footer .parent{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: url(/images/signup-bg.jpg) no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+footer .social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    padding: 20px;
+}
+footer .social-icons a, .contact, h4{
+    color: #fff;
+}
+footer .social-icons a:hover{
+    color: rgb(228, 93, 43);
+}
+
+footer .contact{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+footer .contact i{
+    padding-right: 10px;
+}
+
+
+
+/* -----------------------
+        Our Menus
+---------------------------- */
+/* -----Page-heading------ */
+#page-heading .content{
+    background: url(/images/heading-bg.jpg) no-repeat ;
+    background-size:cover;
+    background-position: center;
+    padding: 180px 0;
+    text-align: center;
+    height: 400px;
+}
+#page-heading h1, p{
+    color: #f2f2f2;
+    font-family: 'Spectral', serif;
+}
+
+/* -----menu-item------ */
+#menu-item p{
+    color: #333;
+}
+.menu-container{
+    padding-bottom: 40px;
+}
+
+.big-Box {
+   max-width: 39%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 30px;
+    background-color: rgb(217, 236, 236);
+}
+.big-Box h1{
+    font-family: 'Spectral', serif;
+    font-size: 35px;
+    border-bottom: 1px solid #dadada;
+   margin-bottom: 20px;
+}
+.menu-container img{
+    width: 300px;
+    height: 418px;
+    border-radius: 3px;
+}
+.menu-box {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+#menu-item .menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu-item .menu-box{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 30px;
+    
+}
+#menu-item .menu-grid img{
+    width: 290px;
+    height: 150px;
+    position: relative;
+}
+
+#menu-item .menu-grid{
+    display: grid;
+    justify-content:center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    
+}
+
+ .price{
+    position: absolute;
+    align-self: start;
+    padding: 5px 9px;
+    background-color: red;
+    color: #fff;   
+}
+.content {
+    text-align: center;
+}
+#menu-item .card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+#menu-item  button{
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+ #prev {
+    left: 10px;
+  
+}
+
+ #next {
+  right: 10px;
+}
+
+/* -----------------------
+         Blog Menu
+---------------------------- */
+/* -----blog heading------ */
+
+.blog-heading{
+    background: url(/images/banner1.jpg) no-repeat ;
+    background-size:cover;
+    background-position: center;
+    padding: 180px 0;
+    text-align: center;
+    height: 400px;
+    margin-bottom: 40px;
+}
+.blog-heading h1, p{
+    color: #f2f2f2;
+    font-family: 'Spectral', serif;
+}
+
+/* ------blog menu------ */
+.blog-Menu .blog-bunch{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+ .blog-Menu .blog-content{
+    box-shadow: 14px 14px 20px #cbced1;
+    margin-bottom: 30px;
+} 
+.blog-Menu .blog-flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 800px;
+        /* height: 470px; */
+        padding: 30px 80px;
+        border: 1px solid #ccc;
+        margin-bottom: 60px;
+        /* background-color: rgb(210, 230, 210); */
+        background: url(/images/blur1.jpg)no-repeat;
+        background-size: cover;
+
+}
+
+.blog-Menu .blog-image{
+    position: relative;
+}
+.blog-Menu img{
+    width: 800px;
+    height: 350px; 
+    
+}
+.blog-Menu h3{
+    font-size: 20px;
+    color: #f9f9f9;
+}
+.blog-Menu p{
+    color: #747474;
+}
+.blog-Menu .blog-date{
+ display: flex;
+padding: 5px 10px;
+background: rgb(168, 0, 0);
+position: absolute;
+align-self: flex-end;
+
+
+
+
+}
+.blog-Menu .content{
+    padding: 20px 50px;
+    line-height: 30px;
+    text-align: start;
+}
+
+/* -----------------------
+    contact Us Menu
+---------------------------- */
+/* -----contact heading------ */
+
+.contact-heading{
+    background: url(/images/banner1.jpg) no-repeat ;
+    background-size:cover;
+    background-position: center;
+    padding: 180px 0;
+    text-align: center;
+    height: 400px;
+    margin-bottom: 40px;
+}
+.contact-heading h1, p{
+    color: #f2f2f2;
+    font-family: 'Spectral', serif;
+}
+/* ------contact-info-------- */
+
+.contact-info h1{
+    color: #9D050B;
+    font-size: 40px;
+
+  
+}
+.contact-info p{
+    color: #f9f9f9;
+    font-size: 18px;
+    padding-bottom: 20px;
+
+  
+}
+.contact-info .contact-info-bunch{
+    width: 80%;
+    height: 450px;
+    background: url(/images/bi4.jpg);
+    background-size: cover;
+    padding: 30px;
+    margin: 0 auto;
+    position: relative;
+}
+.contact-info .content{
+max-width: 40%;
+ position: absolute;
+ right: 20px;
+ text-align: start;
+    
+}
+/* ------contact-menu--------- */
+
+
+.contact-menu-form{
+  padding: 20px 50px;
+
+}
+.contact-menu h1{
+    font-size: 30px;
+    color: #9D050B;
+    font-family: spectrul, sans-serif;
+   
+}
+.contact-menu label{
+   /* color: #000; */
+   font-weight: 500;
+}
+.form-control{
+    color: #666;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.contact-menu input, select, button, textarea{
+    height: 45px;
+    width: 500px;
+    font-size: 20px;
+    padding: 10px 5px;
+    background:url(/images/blogbg.jpg);
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+.contact-menu button{
+    background:#374B10;     
+    border: none;   
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 1px 5px 2px solid grey;
+}
+.contact-menu button:hover{
+    background-color:#9D050B;
+}
+.contact-menu textarea{
+    height: 80px;
+}
+
+
+/*----------- Google Map---------- */
+.googleMap iframe{
+    width: 100%;
+}
+
+
+/*media queries*/
+@media(max-width: 1200px){}
+
+@media(max-width: 992px){}
+
+@media(max-width: 768px){
+  .mm-items{
+    display: none;
+  }  
+  .navbar .mobile-menu{
+    display: block;
+    padding: 10px;
+  }
+  /* ----------
+        home
+  ------------- */
+  .home img{
+    height: 400px;
+}
+  .cook-delicious .content, #services .service-items, #blog .blog-bunch,
+  .cook-delicious .cook-content, #blog .blog-bunch {
+    flex-direction: column;
+    
+  }
+  .cook-delicious h3{
+    font-size: 25px;
+}
+
+.cook-delicious .cook-content{
+    padding:30px 60px;
+}
+  footer .contact {
+    flex-direction: column;
+  }
+
+#booking .booking-bunch{
+    height: 420px;
+}
+#booking img{
+    width: 330px;
+}
+#blog .blog-grid{
+    width: 350px;
+}
+#blog img{
+    width: 350px;
+}
+#blog .blog-date {
+    padding: 2px 5px;
+}
+  /* ----------
+    our menus
+  ------------- */
+  #menu-item .menu-container{
+    flex-direction: column;
+  }
+  #menu-item .menu-box{
+    width: 100%;
+  }
+}
+/* -----------------------
+         Blog Menu
+---------------------------- */
+
+
+/* ------blog menu------ */
+
+.blog-Menu .blog-flex{
+        width: 400px;
+        padding: 30px 40px;
+  
+}
+
+.blog-Menu img{
+    /* width:600px; */
+    height: 180px; 
+    
+}
+.blog-Menu h3{
+    font-size: 20px;
+}
+
+.blog-Menu .content{
+    padding: 20px;
+}
+/* -----------------------
+    contact Us Menu
+---------------------------- */
+/* -----contact heading------ */
+
+.contact-heading{
+    padding: 160px 0;
+    text-align: center;
+    height: 400px;
+    margin-bottom: 40px;
+}
+/* ------contact-info-------- */
+.contact-info h1{ 
+    font-size: 32px; 
+}
+.contact-info p{
+    font-size: 14px;
+}
+.contact-info .contact-info-bunch{
+    width: 80%;
+    height: 450px;
+    background:linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0.5)), url(/images/bi4.jpg);
+    background-size: cover;
+    padding: 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.contact-info .content{
+ max-width: 80%;
+ left: 10px;
+ 
+
+}
+/* ------contact-menu--------- */
+
+.contact-menu h1{
+    font-size: 30px;
+    color: #9D050B;
+    font-family: spectrul, sans-serif;
+   
+}
+.googleMap iframe{
+    object-fit: contain;
+}
+
+
+.contact-menu input, select, button, textarea{
+    width: 340px;
+}
+
+
+                    
+@media(max-width: 576px){}

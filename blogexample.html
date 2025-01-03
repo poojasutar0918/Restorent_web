@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js" integrity="sha512-cJMgI2OtiquRH4L9u+WQW+mz828vmdp9ljOcm/vKTQ7+ydQUktrPVewlykMgozPP+NUBbHdeifE6iJ6UVjNw5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello world!</h1>
+    <button id="change-button">click me!</button>
+    <script>
+        // Ensure the DOM is fully loaded
+        $(document).ready(function() {
+            // jQuery code goes here
+
+            // Change text of the header when button is clicked
+            $('#changeTextBtn').click(function() {
+                $('#header').text('Text changed by jQuery!');
+            });
+        });
+    </script>
+</body>
+</html>
